@@ -1,1 +1,1 @@
-docker build --no-cache --tag bathomas/petpvc `pwd`
+docker build --tag bathomas/petpvc `pwd`
