@@ -1,4 +1,4 @@
-#bathomas/petpvc
+#docker/petpvc
 
 This dockerfile creates a docker image that contains PETPVC (https://github.com/UCL/PETPVC) and build the executables.
 
