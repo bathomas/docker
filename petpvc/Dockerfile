@@ -21,13 +21,13 @@ RUN wget http://downloads.sourceforge.net/project/itk/itk/4.9/InsightToolkit-4.9
 
 RUN mkdir -p /opt/ITK/BUILD && \
 cd /opt/ITK/BUILD && \
-cmake ../InsightToolkit-4.9.0 \
+cmake -DCMAKE_BUILD_TYPE=Release ../InsightToolkit-4.9.0 \
 && make -j && make install
 
 RUN mkdir -p /opt/PETPVC && cd /opt/PETPVC && \
 git clone https://github.com/UCL/PETPVC.git code && \
 mkdir BUILD && cd BUILD && \
-cmake ../code && \
+cmake -DCMAKE_BUILD_TYPE=Release ../code && \
 make -j && make test && make install
 
 #Set number of cores to use (currently 4)
